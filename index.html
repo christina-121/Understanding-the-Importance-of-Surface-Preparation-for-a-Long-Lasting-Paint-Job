@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>surface preparation · key to a lasting paint job</title>
+  <!-- Font & base for clean UI/UX with amazing animation -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d1d1d1 100%);
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      color: #2d2d2d;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .article-card {
+      max-width: 1100px;
+      background: rgba(255, 255, 250, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 4rem 4rem 3.2rem 3.2rem;
+      box-shadow: 0 60px 95px -35px #5f5f5f, 0 30px 40px -15px #3d3d3d;
+      padding: 3rem 3.2rem;
+      border: 1px solid rgba(235, 235, 235, 0.7);
+      transition: transform 0.3s ease, box-shadow 0.5s;
+      animation: prepRise 0.9s cubic-bezier(0.12, 0.75, 0.3, 1) forwards;
+    }
+
+    .article-card:hover {
+      box-shadow: 0 80px 120px -35px #7a7a7a;
+    }
+
+    @keyframes prepRise {
+      0% { opacity: 0; transform: translateY(45px) scale(0.97); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* prep blinking animation */
+    @keyframes prepPulse {
+      0% { background: rgba(220, 220, 220, 0.2); border-left-color: #8c8c8c; border-right-color: #8c8c8c; }
+      40% { background: rgba(220, 220, 220, 0.5); border-left-color: #eab358; border-right-color: #eab358; }
+      80% { background: rgba(220, 220, 220, 0.25); border-left-color: #8c8c8c; border-right-color: #8c8c8c; }
+      100% { background: rgba(220, 220, 220, 0.2); border-left-color: #8c8c8c; border-right-color: #8c8c8c; }
+    }
+
+    .blink-prep {
+      animation: prepPulse 3.3s infinite ease-in-out;
+      border-left: 12px solid #6f6f6f;
+      border-right: 12px solid #6f6f6f;
+      border-radius: 4rem;
+      padding: 2.2rem 2.5rem;
+      background: rgba(240, 240, 240, 0.3);
+      margin: 3rem 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(145deg, #6f6f6f, #4a4a4a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 4px solid #d6d6d6;
+      padding-bottom: 1rem;
+    }
+
+    .title-emoji {
+      font-size: 3.8rem;
+      filter: drop-shadow(2px 8px 16px #a5a5a5);
+    }
+
+    .subhead {
+      font-size: 1.4rem;
+      font-weight: 340;
+      color: #7a7a7a;
+      margin-bottom: 2.2rem;
+      padding-left: 2.2rem;
+      border-left: 8px solid #e7aa4d;
+      background: #f5f5f570;
+      border-radius: 0 80px 80px 0;
+      padding: 0.8rem 2.2rem;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 580;
+      margin: 2.8rem 0 1.4rem 0;
+      color: #6b6b6b;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 3px dashed #c9c9c9;
+      padding-bottom: 0.6rem;
+    }
+
+    h2 span {
+      font-size: 2.7rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 2rem 0 1rem;
+      color: #7a7a7a;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+      font-weight: 350;
+      color: #4f4f4f;
+      font-size: 1.1rem;
+    }
+
+    /* prep step grid: clean, sand, patch, caulk, prime */
+    .prep-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2.5rem 0 2rem;
+    }
+
+    .prep-card {
+      background: #ffffffee;
+      border-radius: 3rem;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 22px 40px -22px #8f8f8f;
+      transition: all 0.3s;
+      border: 1px solid white;
+      backdrop-filter: blur(2px);
+      text-align: center;
+    }
+
+    .prep-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      background: white;
+      border-color: #dba85a;
+      box-shadow: 0 32px 48px -28px #979797;
+    }
+
+    .prep-icon {
+      font-size: 3.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .prep-title {
+      font-weight: 650;
+      font-size: 1.8rem;
+      color: #6f6f6f;
+      margin: 0.5rem 0 0.3rem;
+    }
+
+    .badge-prep {
+      background: #d68f44;
+      color: #3a3a3a;
+      border-radius: 40px;
+      padding: 0.2rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: inline-block;
+      margin: 1rem 0 0.2rem;
+    }
+
+    /* graphic strip */
+    .graphic-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 45px;
+      background: #f0f0f0;
+      border-radius: 150px;
+      padding: 2rem 3.5rem;
+      margin: 2.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    .graphic-icon {
+      font-size: 4rem;
+      filter: drop-shadow(0 8px 18px #bdbdbd);
+      transition: transform 0.2s;
+    }
+
+    .graphic-icon:hover {
+      transform: rotate(8deg) scale(1.15);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffffee;
+      border-radius: 3rem;
+      overflow: hidden;
+      box-shadow: 0 20px 42px -22px #8f8f8f;
+      margin: 2.5rem 0;
+      backdrop-filter: blur(4px);
+    }
+
+    th {
+      background: #7f7f7f;
+      color: white;
+      font-weight: 500;
+      padding: 1.2rem 1.5rem;
+      text-align: left;
+      font-size: 1.2rem;
+    }
+
+    td {
+      padding: 1.2rem 1.5rem;
+      border-bottom: 1px solid #e0e0e0;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .footer-links {
+      margin-top: 5rem;
+      padding-top: 2.8rem;
+      border-top: 6px solid #d6d6d6;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.8rem;
+      justify-content: center;
+      font-size: 1.3rem;
+      background: #f7f7f7;
+      border-radius: 80px 80px 40px 40px;
+      padding: 2rem 3.5rem;
+      backdrop-filter: blur(3px);
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.8rem 2.2rem;
+      border-radius: 70px;
+      background: white;
+      border: 1px solid #cfcfcf;
+      color: #6b6b6b;
+      transition: all 0.25s;
+      box-shadow: 0 6px 18px #c7c7c7;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-links a:hover {
+      background: #f2f2f2;
+      border-color: #c99e4b;
+      transform: scale(1.07);
+      box-shadow: 0 18px 28px #b5b5b5;
+    }
+
+    .blink-dot {
+      width: 16px;
+      height: 16px;
+      background: #ecaa4b;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 12px;
+      animation: dotPrep 1.8s infinite;
+    }
+
+    @keyframes dotPrep {
+      0% { opacity: 0.4; background: #cc8228; }
+      50% { opacity: 1; background: #ffc468; box-shadow: 0 0 22px #f5a93b; }
+      100% { opacity: 0.4; background: #cc8228; }
+    }
+
+    @media (max-width: 750px) {
+      .article-card { padding: 2rem 1.5rem; }
+      h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="article-card">
+  <h1>
+    <span class="title-emoji">🛠️🧹</span> surface preparation
+  </h1>
+  <div class="subhead">clean · sand · patch · caulk · prime · why it matters</div>
+
+  <!-- intro with blinking dot -->
+  <p><span class="blink-dot"></span> <strong>The secret to a paint job that looks great and lasts for years isn't in the can — it's in the prep.</strong> Before a single drop of color touches your walls, professionals spend time cleaning, sanding, patching, caulking, and priming. These steps prevent peeling, ensure adhesion, and create that smooth, flawless finish. This guide explains why each step is essential and how they work together to protect your Bloomington home.</p>
+
+  <!-- graphic strip -->
+  <div class="graphic-strip">
+    <span class="graphic-icon">🧼✨</span>
+    <span class="graphic-icon">🔨🕳️</span>
+    <span class="graphic-icon">🧴🪚</span>
+    <span class="graphic-icon">🎨🖌️</span>
+  </div>
+
+  <!-- prep step grid: clean, sand, patch, caulk, prime -->
+  <h2><span>🔍</span> five essential prep steps</h2>
+  <div class="prep-grid">
+    <div class="prep-card">
+      <div class="prep-icon">🧼💧</div>
+      <div class="prep-title">clean</div>
+      <p>Remove dirt, grease, and chalky residue. TSP or mild detergent — rinsing is critical for adhesion.</p>
+      <span class="badge-prep">no dirt, no peeling</span>
+    </div>
+    <div class="prep-card">
+      <div class="prep-icon">🔨🕳️</div>
+      <div class="prep-title">patch & fill</div>
+      <p>Fill nail holes, cracks, and dents with spackle or joint compound. Sand smooth after drying.</p>
+      <span class="badge-prep">hide imperfections</span>
+    </div>
+    <div class="prep-card">
+      <div class="prep-icon">🪚🧽</div>
+      <div class="prep-title">sand</div>
+      <p>Feather edges of patches, dull glossy surfaces. Fine-grit sandpaper creates "tooth" for paint.</p>
+      <span class="badge-prep">smooth = professional</span>
+    </div>
+    <div class="prep-card">
+      <div class="prep-icon">🧴🔧</div>
+      <div class="prep-title">caulk</div>
+      <p>Seal gaps between trim and walls, around windows. Prevents cracks and air leaks.</p>
+      <span class="badge-prep">flexible seal</span>
+    </div>
+    <div class="prep-card">
+      <div class="prep-icon">🎨🧪</div>
+      <div class="prep-title">prime</div>
+      <p>Seals porous surfaces, blocks stains, ensures uniform paint absorption. Essential for bare drywall or wood.</p>
+      <span class="badge-prep">paint locks in</span>
+    </div>
+  </div>
+
+  <!-- blinking block: why prep matters -->
+  <div class="blink-prep">
+    <h3 style="margin-top:0; display:flex; gap:12px;"><span>🏡⏳</span> skipping prep = peeling, cracking, and regret</h3>
+    <p>Paint is only as good as the surface beneath it. Dirt prevents adhesion. Unfilled holes show through. Glossy surfaces reject new paint. Without primer, stains bleed and colors look uneven. Bloomington pros like those offering <strong>Interior house painting</strong> know that thorough prep is what separates a DIY look from a showroom finish. As one client put it: "They took great care with prep and cleanup, and the finish is smooth, clean, and exactly what I wanted."</p>
+  </div>
+
+  <!-- detailed prep table -->
+  <h2><span>📋</span> prep step by step: what & why</h2>
+  <table>
+    <thead><tr><th>step</th><th>what it involves</th><th>why it's critical</th><th>common tools/materials</th></tr></thead>
+    <tbody>
+      <tr><td><strong>🧼 clean</strong></td><td>wash walls with cleaner, rinse, let dry</td><td>removes oils, cobwebs, chalk — without it, paint may peel</td><td>TSP, sponges, buckets</td></tr>
+      <tr><td><strong>🔨 patch</strong></td><td>fill holes/cracks, sand smooth</td><td>imperfections telegraph through paint, especially in gloss</td><td>spackle, putty knife, sandpaper</td></tr>
+      <tr><td><strong>🪚 sand</strong></td><td>scuff old paint, smooth patches</td><td>creates profile for adhesion; removes nibs</td><td>fine-grit paper, sanding block</td></tr>
+      <tr><td><strong>🧴 caulk</strong></td><td>apply paintable caulk to trim/wall joints</td><td>prevents cracks, seals gaps, looks crisp</td><td>caulk gun, latex caulk, damp rag</td></tr>
+      <tr><td><strong>🎨 prime</strong></td><td>apply primer; may be tinted</td><td>even absorption, stain block, hide color changes</td><td>primer, roller, brush</td></tr>
+    </tbody>
+  </table>
+
+  <!-- extra graphic strip 2 -->
+  <div style="display: flex; gap: 24px; justify-content: space-around; font-size: 3.2rem; margin: 2.5rem 0;">
+    <span>🧼➡️✨</span> <span>🔨➡️🧽</span> <span>🧴➡️🪚</span> <span>🎨➡️✅</span>
+  </div>
+
+  <!-- deep dive: cleaning & sanding -->
+  <h2><span>🧼</span> clean & sand: creating the perfect canvas</h2>
+  <p><strong>Cleaning</strong> is non‑negotiable. Kitchens have grease, bathrooms have soap scum, and even living rooms accumulate dust. A simple wipe with a damp rag isn't enough — pros use trisodium phosphate (TSP) or a substitute, then rinse thoroughly. <strong>Sanding</strong> follows: it smooths patches and deglosses old paint. For walls, 120‑150 grit is typical; for trim, 150‑180. Always sand in the direction of the surface, and wipe away dust with a tack cloth.</p>
+
+  <!-- patching & caulking details -->
+  <h3><span>🔨</span> patching & caulking: details that matter</h3>
+  <p>Small holes and dents are filled with spackle (for small spots) or joint compound (for larger areas). Apply with a putty knife, let dry, then sand flush. <strong>Caulking</strong> is the final detail: run a thin bead along trim/wall intersections, baseboards, and window/door casings. Tool it with a wet finger or tool for a smooth finish. This step alone makes rooms look crisp and professionally finished.</p>
+
+  <!-- priming explained -->
+  <div style="background: #f0f0f0; border-radius: 3rem; padding: 2rem 2.5rem; margin: 2.5rem 0;">
+    <span style="font-size:2.8rem; margin-right: 16px;">🎨🧪</span>
+    <strong style="font-size:1.7rem;">primer: the unsung hero</strong>
+    <p style="margin-top:0.8rem;">Primer isn't just "thinned‑down paint." It serves specific purposes:</p>
+    <ul style="margin-top:0.5rem; list-style-type: '✔️ '; padding-left: 2.2rem;">
+      <li><strong>stain blocking:</strong> covers water stains, smoke, marker</li>
+      <li><strong>adhesion:</strong> bonds to glossy or challenging surfaces</li>
+      <li><strong>uniformity:</strong> prevents "flashing" (uneven sheen) when painting over patches or different materials</li>
+      <li><strong>hide:</strong> tinted primer reduces number of topcoats needed for dramatic color changes</li>
+    </ul>
+    <p style="margin-top:1rem;">Professionals often use dedicated primers — not paint‑and‑primer‑in‑one — for best results.</p>
+  </div>
+
+  <!-- local pro insight -->
+  <h3><span>🧑‍🎨🏡</span> bloomington pros: prep is their foundation</h3>
+  <p>Local painting companies like <strong>my map</strong> emphasize preparation in their process. Their 6‑step approach includes: initial consultation, detailed surface evaluation, and thorough preparation before any paint is applied. As one satisfied Bloomington homeowner noted: "They took great care with prep and cleanup, and the finish is smooth, clean, and exactly what I wanted." This attention to detail is why prep is the foundation of a lasting paint job.</p>
+
+  <!-- common prep mistakes -->
+  <h3><span>⚠️</span> common prep mistakes to avoid</h3>
+  <ul style="margin:1rem 0 1.5rem 2.5rem; list-style-type: '❌ '; font-size:1.1rem;">
+    <li>painting over dirty or greasy walls</li>
+    <li>skipping sanding on glossy surfaces</li>
+    <li>not priming bare drywall or wood</li>
+    <li>using cheap caulk that cracks or won't take paint</li>
+    <li>rushing — letting patches or caulk dry fully is essential</li>
+  </ul>
+
+  <!-- final educational note -->
+  <p><span class="blink-dot"></span> Surface preparation is the invisible art behind every beautiful paint job. It's tedious, dusty, and time‑consuming — but it's also what makes the difference between a finish that lasts a decade and one that fails in a year. Whether you're a DIYer or hiring a pro, understanding these steps helps you appreciate the work and demand quality. For expert prep and painting in Bloomington, trusted companies like those on <strong>Github Repositary</strong> are ready to transform your home.</p>
+
+  <!-- Links exactly as requested: at the end -->
+  <div class="footer-links">
+    <a href="https://millerprecisionservices.net/" target="_blank" rel="noopener">🏡 Interior house painting</a>
+    <a href="https://share.google/WK9HTUzwpLmQtnCRd" target="_blank" rel="noopener">📍 my map</a>
+    <a href="https://christina-121.github.io/A-Homeowner-s-Guide-to-Paint-Finishes/" target="_blank" rel="noopener">📁 Github Repositary</a>
+  </div>
+
+  <!-- footer note -->
+  <div style="text-align: center; margin-top: 2.2rem; font-size: 0.95rem; color: #7a7a7a;">
+    🛠️ surface prep guide · 100% educational, zero fluff.
+  </div>
+</div>
+</body>
+</html>
